@@ -1,0 +1,40 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Vehicle Products</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contacts">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname; // Get the current page URL
+    const navItems = document.querySelectorAll('.nav-item'); // Select all nav items
+
+    // Loop through each nav item and set active class if its href matches the current page URL
+    navItems.forEach(item => {
+        const href = item.querySelector('a').getAttribute('href');
+        if (href === currentPage) {
+            item.classList.add('active');
+        }
+    });
+});
+</script>
+  

@@ -1,0 +1,19 @@
+Feature: User Login
+
+  Scenario: Successful Login
+    Given I am on the login page
+    When I enter "valid_user" as the username
+    When I enter "valid_password" as the password
+    When I click the login button
+    Then I should see a success message
+
+  Scenario Outline: Login with Invalid Credentials
+    Given I am on the login page
+    When I enter "<username>" as the username
+    When I enter "<password>" as the password
+    When I click the login button
+    Then I should see an error message stating "<error_message>"
+    Examples:
+      | username | password | error_message |
+      | invalid  | password  | Invalid username or password |
+      | username | invalid  | Invalid username or password |

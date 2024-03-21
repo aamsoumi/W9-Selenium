@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Car</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="js/script.js" defer></script>
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <div class="container">
+        <main>
+            <h2>Choose Your Car</h2>
+            <form id="carForm" class="row" action="/selectCar" method="post">
+                <div class="col-md-6 mb-3"> <!-- Added margin bottom to create space -->
+                    <label for="make">Car Make</label>
+                    <select class="form-control" id="make" name="make" required>
+                        <option value="">Select Make</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3"> <!-- Added margin bottom to create space -->
+                    <label for="model">Car Model</label>
+                    <select class="form-control" id="model" name="model" required disabled>
+                        <option value="">Select Model</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3"> <!-- Added margin bottom to create space -->
+                    <label for="year">Car Year</label>
+                    <select class="form-control" id="year" name="year" required disabled>
+                        <option value="">Select Year</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary mt-3" id="carSubmitButton">Submit</button> <!-- Added margin top to create space -->
+                </div>
+            </form>
+        </main>
+    </div>
+    <%- include('footer.ejs') %>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

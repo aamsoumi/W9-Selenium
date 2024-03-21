@@ -1,0 +1,24 @@
+{
+  "name": "selenium_intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha ./Step-*/tests/*.spec.js",
+    "server": "nodemon ./server.js",
+    "test-step1": "npx mocha ./Step-1/selectNavigate.spec.js",
+    "test-step2": "npx mocha ./Step-2/tests/login.spec.js",
+    "test-step3": "npx mocha ./Step-3/tests/s.js"
+    
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "express": "^4.19.1",
+    "selenium-webdriver": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

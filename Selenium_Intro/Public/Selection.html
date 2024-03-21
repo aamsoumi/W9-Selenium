@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Case Example</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+    <form id="testForm">
+        <h1>Test Case Example</h1>
+        <label for="selectElement1">Select Cheese 1:</label>
+        <select id="selectElement1">
+            <option value="cheddar">Cheddar</option>
+            <option value="edam">Edam</option>
+            <option value="gouda">Gouda</option>
+        </select>
+
+        <label for="selectElement2">Select Cheese 2:</label>
+        <select id="selectElement2">
+            <option value="blue">Blue Cheese</option>
+            <option value="brie">Brie</option>
+            <option value="mozzarella">Mozzarella</option>
+        </select>
+
+        <label for="selectElement3">Select Cheese 3:</label>
+        <select id="selectElement3">
+            <option value="swiss">Swiss Cheese</option>
+            <option value="feta">Feta</option>
+            <option value="goat">Goat Cheese</option>
+        </select>
+
+        <button type="submit" id="submitButton">Submit</button>
+    </form>
+
+    <div id="alertBox"></div>
+
+    <script>
+        document.getElementById("testForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            // Get the selected cheeses
+            let selectedCheese1 = document.getElementById("selectElement1").value;
+            let selectedCheese2 = document.getElementById("selectElement2").value;
+            let selectedCheese3 = document.getElementById("selectElement3").value;
+
+            // Show alert with the selected cheeses
+            alert("Selected Cheese 1: " + selectedCheese1 + "\nSelected Cheese 2: " + selectedCheese2 + "\nSelected Cheese 3: " + selectedCheese3);
+        });
+    </script>
+</body>
+</html>
