@@ -31,8 +31,21 @@ app.get('/', (req, res) => {
     res.render('login', { username });
 });
 
+
+// Logout route
+app.get('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            console.log(err);
+            return res.redirect('/');
+        }
+        res.redirect('/');
+    });
+});
+
+
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}: localhost:${PORT}`);
 });
